@@ -1,0 +1,64 @@
+.signup-title {
+  text-align: center;
+}
+
+.signup-form {
+  padding: 1rem;
+  display: grid;
+}
+
+.signup-form label {
+  padding: 1rem 0 1rem 0;
+  font-weight: bold;
+}
+
+.signup-form input {
+  border-radius: 1.5rem;
+}
+
+.signup-form select,
+.signup-form button {
+  border-radius: 1.5rem;
+}
+
+/* label,
+input,
+select {
+  display: block;
+} */
+
+.signup-form input[id*="terms"],
+.signup-form input[id*="terms"] + label {
+  display: inline-block;
+  width: auto;
+}
+
+.signup-form button[type="submit"] {
+  display: block;
+  /* margin: 1rem; */
+}
+
+.signup-form input.invalid {
+  border-color: red;
+}
+
+@media (min-width: 40rem) {
+  .signup-form {
+    /* padding: 1rem;
+    display: grid;
+    justify-content: space-around;
+    grid-auto-columns: 10rem;
+    grid-template-columns: 10rem auto;
+    grid-auto-rows: 2.5rem;
+    gap: 1rem; */
+    margin: auto;
+    width: 25rem;
+    grid-template-columns: 10rem auto;
+    grid-auto-rows: 2rem;
+    gap: 1.2rem;
+  }
+
+  .terms_container {
+    grid-column: span 2;
+  }
+} ;
