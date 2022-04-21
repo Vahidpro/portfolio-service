@@ -8,19 +8,21 @@ $dark-blue-color: #143c53;
 $dark-violet-color: #481555;
 $light-color: #f3f2f2;
 
-.wrapper {
-  max-width: 1084px;
-}
 * {
   font-family: "Vazirmatn", sans-serif;
   transition: all 0.2s;
   box-sizing: border-box;
 }
 
+.wrapper {
+  max-width: 1084px;
+}
+
 body {
-  /* background: #0b0c10; */
-  /* color: lightgray; */
+  background: #0b0c10;
+  color: lightgray;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .btn {
@@ -31,14 +33,14 @@ body {
   animation: wiggle 200ms 1s 9 alternate;
 }
 
-.main-menu li a {
-  text-decoration: none;
-}
-
 .main-menu {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+
+  li a {
+    text-decoration: none;
+  }
 }
 
 .section-title {
@@ -49,23 +51,23 @@ body {
   background: coral;
 }
 
-/* button {
-  background: darkturquoise;
-  color: black;
-  border-radius: 20px;
-  border: darkturquoise 1px solid;
-  font: inherit;
-  font-weight: bolder;
-  padding: 8px;
-  margin: 10px;
-  box-sizing: border-box;
-}
+// button {
+//   background: darkturquoise;
+//   color: black;
+//   border-radius: 20px;
+//   border: darkturquoise 1px solid;
+//   font: inherit;
+//   font-weight: bolder;
+//   padding: 8px;
+//   margin: 10px;
+//   box-sizing: border-box;
 
-button:hover {
-  color: aliceblue;
-  background: #1f2833;
-  cursor: pointer;
-} */
+//   &:hover {
+//     color: aliceblue;
+//     background: #1f2833;
+//     cursor: pointer;
+//   }
+// }
 
 .toggle-button {
   cursor: pointer;
@@ -73,16 +75,16 @@ button:hover {
   border-radius: 100px;
   background: none;
   display: inline-block;
+
+  img {
+    height: 2rem;
+    width: 2rem;
+  }
 }
 .open {
   display: block !important;
   opacity: 1;
   transform: translateY(0);
-}
-
-.toggle-button img {
-  height: 2rem;
-  width: 2rem;
 }
 
 .mobile-nav .close-button {
@@ -121,31 +123,32 @@ button:hover {
 .mob-nav-item {
   margin: 1rem auto;
   padding: 0.8rem;
-}
 
-.mob-nav-item a {
-  margin: 1rem auto;
-  text-decoration: none;
-  color: black;
-}
+  a {
+    margin: 1rem auto;
+    text-decoration: none;
+    color: black;
+  }
 
-.mob-nav-item:hover {
-  background: rgba(155, 155, 155, 0.192);
-  border-radius: 100px 0px 0px 100px;
+  :hover {
+    background: rgba(155, 155, 155, 0.192);
+    border-radius: 100px 0px 0px 100px;
+  }
 }
 
 .register-botton {
   background: rgba(35, 163, 46, 0.281);
   border-radius: 100px 0px 0px 100px;
-}
-.register-botton a {
-  border-radius: 100px 0px 0px 100px;
-  color: rgb(0, 0, 0);
-}
 
-.register-botton:hover {
-  background: #26c2486b;
-  border-radius: 100px 0px 0px 100px;
+  a {
+    border-radius: 100px 0px 0px 100px;
+    color: rgb(0, 0, 0);
+  }
+
+  &:hover {
+    background: #26c2486b;
+    border-radius: 100px 0px 0px 100px;
+  }
 }
 
 .copyright {
@@ -153,6 +156,7 @@ button:hover {
 }
 
 @media (min-width: 30rem) {
+  
   .links-container {
     display: flex;
     justify-content: space-around;

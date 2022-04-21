@@ -1,0 +1,261 @@
+body {
+  color: aliceblue;
+  background-color: #0f1720;
+}
+
+.plan {
+  width: 100%;
+  background: #1f2833;
+  border-radius: 1.5rem;
+  margin: 1rem;
+  padding: 1rem 0rem 0rem 0rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.highlighted {
+  background: #11664d;
+  text-align: center;
+}
+
+.plan__recommended {
+  background: aliceblue !important;
+  color: #11664d !important;
+  border-radius: 1.5625rem;
+  padding: 0.5rem;
+  font-size: 2rem;
+  width: 80%;
+  margin-right: 10%;
+}
+
+.plan__features {
+  list-style: none;
+  vertical-align: middle;
+}
+
+.plan__feature {
+  font-size: 1.5rem;
+}
+
+.plan-title {
+  color: #66fcf1;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.plan-price {
+  color: rgba(169, 169, 169, 0.753);
+  font-size: 2rem;
+}
+
+.plan__recommended-title {
+  color: #00b7ff;
+  font-size: x-large;
+  margin: 0;
+}
+
+.plan__recommended-price {
+  color: #1f2833;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0.2rem;
+}
+
+.plans-container {
+  margin: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  > h3 {
+    font-size: 1.7rem;
+  }
+
+  > div > button {
+    width: 9em;
+    height: 3em;
+    border-radius: 30em;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: 1rem 0rem 2rem 0rem;
+    cursor: pointer;
+
+    /* box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff; */
+
+    &::before {
+      content: "";
+      width: 0;
+      height: 3em;
+      border-radius: 30em;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+      transition: 0.5s ease;
+      display: block;
+      z-index: -1;
+      cursor: pointer;
+    }
+
+    &:hover::before {
+      width: 9em;
+    }
+  }
+}
+
+ul {
+  padding: 0;
+}
+
+.open {
+  display: block !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.backdrop {
+  display: none;
+  position: fixed;
+  opacity: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  transition: opacity 0.3s linear;
+}
+
+.modal {
+  position: fixed;
+  /* display: none; */
+  opacity: 0;
+  transform: translateY(-3rem);
+  transition: opacity 0.5s ease-out,
+    transform 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+  z-index: 200;
+  top: 20%;
+  left: 30%;
+  width: 40%;
+  background: #1f2833;
+  color: antiquewhite;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  margin: 10%;
+
+  button {
+    border: none;
+    margin: 2%;
+  }
+
+  .modal-title {
+    text-align: center;
+    margin: 0 0 1rem 0;
+    font-size: 1.6rem;
+  }
+}
+
+.modal-actions {
+  text-align: center;
+}
+
+.modal-action {
+  cursor: pointer;
+  background: #000000;
+  color: #ffffff;
+  border-radius: 31.25rem;
+  padding: 0.875rem 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1;
+  min-width: 8.75rem;
+  transition: transform 200ms, background 200ms;
+
+  &:hover,
+  &:active {
+    transform: translateY(-0.125rem);
+  }
+}
+
+.modal-action-yes {
+  background: green;
+  border-radius: 31.25rem;
+
+  &:hover,
+  &:active {
+    background: #18c443;
+  }
+}
+
+.modal-action-no {
+  background: red;
+
+  & &:hover,
+  &:active {
+    background: #fc6060;
+  }
+}
+
+/* Tablet */
+
+@media (min-width: 30rem) {
+  .plans-container {
+    margin: 0.6rem;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .plan {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    vertical-align: middle;
+  }
+
+  .plan__feature {
+    padding: 0.3rem auto;
+    font-size: 1rem;
+  }
+
+  article > h3 {
+    font-size: 1rem;
+  }
+
+  .plan-title {
+    color: #66fcf1;
+    border-radius: 0.5rem;
+  }
+
+  .plan-price {
+    color: rgba(169, 169, 169, 0.753);
+    font-size: 1.5rem;
+  }
+}
+
+/* Desktop */
+
+@media (min-width: 48rem) {
+  .plan {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 35rem;
+  }
+
+  .highlighted {
+    box-shadow: 0.125rem 0.125rem 0.1875rem 0.125rem rgba(65, 65, 65, 0.719);
+    background: #11664d;
+    text-align: center;
+    width: 35%;
+  }
+}
