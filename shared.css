@@ -242,13 +242,14 @@ header {
   margin-top: 5rem;
 }
 
-.hero-section .right p {
+.hero-section .right .paragraph {
   margin-top: 3rem;
   text-justify: inter-word;
+  text-align: justify;
 }
 
 .hero-section .right .btn {
-  margin: 1.5rem;
+  margin: 1.5rem 0.5rem 1.5rem;
 }
 
 .hero-section .left {
@@ -262,7 +263,77 @@ header {
 }
 
 .achievement-cards {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.achievement-card {
+  position: absolute;
+  width: 12rem;
+}
+
+.achievement-card .content {
+  background: #080741;
+  border-radius: 1.5rem;
+  padding: 0.6rem 2rem;
+}
+
+.achievement-card .content h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.8rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.achievement-card .content .enroll-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.achievement-card .content .overal-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.achievement-card .content h3,
+.achievement-card .content img {
+  display: inline;
+}
+
+.achievement-card .content img {
+  height: 1.8rem;
+}
+
+.achievement-card .content p {
+  text-align: center;
+}
+
+.students-enrolled {
+  right: 25%;
+  bottom: 5%;
 }
 
 .register-button:hover {

@@ -227,13 +227,14 @@ header {
     align-self: flex-start;
     margin-top: 5rem;
 
-    p {
+    .paragraph {
       margin-top: 3rem;
       text-justify: inter-word;
+      text-align: justify;
     }
 
     .btn {
-      margin: 1.5rem;
+      margin: 1.5rem 0.5rem 1.5rem;
     }
   }
 
@@ -249,7 +250,55 @@ header {
 }
 
 .achievement-cards {
-  display: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.achievement-card {
+  position: absolute;
+  width: 12rem;
+
+  .content {
+    background: #080741;
+    border-radius: 1.5rem;
+    padding: 0.6rem 2rem;
+
+    h3 {
+      display: flex;
+      font-size: 1.8rem;
+      flex-direction: column;
+    }
+
+    .enroll-div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .overal-div {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    h3,
+    img {
+      display: inline;
+    }
+
+    img {
+      height: 1.8rem;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+}
+
+.students-enrolled {
+  right: 25%;
+  bottom: 5%;
 }
 
 // Buttons
