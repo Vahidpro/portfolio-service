@@ -1,47 +1,139 @@
 @import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;900&display=swap");
 * {
   font-family: "Vazirmatn", sans-serif;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-.wrapper {
-  max-width: 1084px;
+  margin: 0;
 }
 
 body {
   background: #0b0c10;
   color: lightgray;
-  margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.btn {
-  padding: 0.5rem;
-  font-weight: 800;
-  border-radius: 1.25rem;
-  background-color: #00a2ff;
-  -webkit-animation: wiggle 200ms 1s 9 alternate;
-          animation: wiggle 200ms 1s 9 alternate;
+.wrapper {
+  max-width: 980px;
+  margin: 0 auto;
 }
 
-.main-menu {
+header {
+  height: 100vh;
+  width: 100%;
+  background: #1f1a6a;
+  background: linear-gradient(49deg, #1f1a6a 0%, rgba(9, 17, 121, 0.994835) 45%, #005bff 100%);
+}
+
+.logo {
+  display: inline;
+  position: absolute;
+  left: 0.5rem;
+  margin: 1.2rem;
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 900;
+  background: #3385ff;
+  border-radius: 2rem;
+  -webkit-transform: rotateZ(-5deg);
+          transform: rotateZ(-5deg);
+}
+
+.logo p {
+  font-family: "Nunito", sans-serif;
+  display: inline;
+}
+
+.desktop-menu {
+  display: none;
+}
+
+.btn {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: #000;
+  font-family: vazirmatn, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 8rem;
+  outline: 0;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
+.btn:focus {
+  color: #171e29;
+}
+
+.btn:hover,
+.btn :active {
+  background-color: #3385ff;
+}
+
+.dark {
+  background-color: #199615;
+}
+
+.dark:hover,
+.dark :active {
+  background-color: #ffffff;
+}
+
+.light {
+  background-color: #142d53;
+}
+
+.light:hover,
+.light :active {
+  background-color: #17327a;
+}
+
+.enroll-icon::before {
+  content: url("./images/enroll-icon.svg");
+  padding-left: 0.3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(0.25rem);
+          transform: translateY(0.25rem);
 }
 
-.main-menu li a {
-  text-decoration: none;
+.enroll-icon {
+  padding: 0.5rem;
+}
+
+.toggle-button {
+  display: block;
+  cursor: pointer;
+  border: none;
+  width: 2rem;
 }
 
 .section-title {
@@ -49,24 +141,11 @@ body {
 }
 
 ::-moz-selection {
-  background: coral;
+  background: blueviolet;
 }
 
 ::selection {
-  background: coral;
-}
-
-.toggle-button {
-  cursor: pointer;
-  border: none;
-  border-radius: 100px;
-  background: none;
-  display: inline-block;
-}
-
-.toggle-button img {
-  height: 2rem;
-  width: 2rem;
+  background: blueviolet;
 }
 
 .open {
@@ -144,7 +223,94 @@ body {
   text-align: center;
 }
 
-@media (min-width: 30rem) {
+.hero-section {
+  height: 90vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0rem 1rem 0 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-section .right {
+  width: 28.125rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 5rem;
+}
+
+.hero-section .right p {
+  margin-top: 3rem;
+  text-justify: inter-word;
+}
+
+.hero-section .right .btn {
+  margin: 1.5rem;
+}
+
+.hero-section .left {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 2rem;
+}
+
+.hero-section .left img {
+  height: 22rem;
+}
+
+.achievement-cards {
+  display: none;
+}
+
+.register-button:hover {
+  background-color: #59cc55 !important;
+}
+
+@media (min-width: 48rem) {
+  .main-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 80%;
+    margin-top: 1rem;
+  }
+  .main-menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    font-size: 1.125rem;
+  }
+  .main-menu li a:hover {
+    background: #002d709c;
+  }
+  .desktop-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .mobile-nav,
+  .toggle-button {
+    display: none;
+  }
   .links-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -153,9 +319,6 @@ body {
         justify-content: space-around;
     background-color: #05051b;
     color: #d3d0d0;
-  }
-  .main-menu a {
-    text-decoration: none;
   }
   .links a {
     text-decoration: none;
