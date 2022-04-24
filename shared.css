@@ -219,10 +219,6 @@ header {
   border-radius: 100px 0px 0px 100px;
 }
 
-.copyright {
-  text-align: center;
-}
-
 .hero-section {
   height: 90vh;
   width: 100%;
@@ -336,10 +332,6 @@ header {
   bottom: 5%;
 }
 
-section {
-  margin: 5rem 5rem 5rem 5rem;
-}
-
 h2 {
   font-weight: 700;
   font-size: 2rem;
@@ -356,6 +348,7 @@ h2 {
           align-items: center;
   height: 100vh;
   gap: 4rem;
+  margin: 5rem 5rem 5rem 5rem;
 }
 
 .testimonial-section .right {
@@ -408,6 +401,174 @@ h2 {
   padding: 0.5rem;
 }
 
+.testimonial-card .info p {
+  font-weight: 200;
+}
+
+.courses {
+  height: 100vh;
+  background: rgba(4, 2, 34, 0.288);
+  background: linear-gradient(45deg, rgba(4, 2, 34, 0) 0%, #001438 100%);
+}
+
+.courses h2 {
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.courses .course-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 3rem;
+}
+
+.courses a {
+  margin: 1rem 5rem;
+}
+
+.course-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(26, 26, 26, 0.315);
+  border-radius: 1.6rem;
+  -webkit-box-shadow: rgba(55, 0, 255, 0.603) 0px 30px 90px;
+          box-shadow: rgba(55, 0, 255, 0.603) 0px 30px 90px;
+  padding: 1rem;
+  width: 40%;
+  margin: 2rem;
+}
+
+.course-card > img {
+  min-height: 12rem;
+  min-width: 2rem;
+}
+
+.course-card .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+.course-card .info .duration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.5rem;
+  font-weight: 200;
+}
+
+.course-card .info .duration img {
+  margin-left: 0.5rem;
+}
+
+.app-section h2 {
+  text-align: center;
+  margin: 2rem;
+}
+
+.app-section p {
+  margin: 1rem;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.app-section div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app-section div img {
+  width: 30%;
+  margin: 5%;
+  margin-bottom: 10rem;
+}
+
+.links-container {
+  background-color: #05051b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #d3d0d0;
+  padding: 2rem;
+}
+
+.links a {
+  text-decoration: none;
+  color: #c7c5c5;
+  padding: 0.3rem;
+}
+
+.links a:hover {
+  color: #797676;
+}
+
+.links li,
+.links .social,
+.links input,
+.links button {
+  margin-top: 0.5rem;
+}
+
+.links input {
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.3rem;
+}
+
+.links button {
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.3rem;
+  font-weight: 500;
+}
+
+.links button:hover {
+  cursor: pointer;
+  background-color: #a5a5a5;
+}
+
+.copyright {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.copyright a {
+  text-decoration: none;
+  color: #ff91ed;
+}
+
 .register-button:hover {
   background-color: #59cc55 !important;
 }
@@ -453,19 +614,6 @@ h2 {
   .mobile-nav,
   .toggle-button {
     display: none;
-  }
-  .links-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    background-color: #05051b;
-    color: #d3d0d0;
-  }
-  .links a {
-    text-decoration: none;
-    color: #ffffff;
   }
   ul {
     list-style-type: none;
