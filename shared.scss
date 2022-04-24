@@ -260,6 +260,7 @@ header {
 
   .content {
     background: #080741;
+    // box-shadow: rgba(0, 0, 0, 0.74) 0px 22px 70px 4px;
     border-radius: 1.5rem;
     padding: 0.6rem 2rem;
 
@@ -299,6 +300,72 @@ header {
 .students-enrolled {
   right: 25%;
   bottom: 5%;
+}
+
+section {
+  margin: 5rem 5rem 5rem 5rem;
+}
+
+// Headings
+
+h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #0072be;
+}
+
+.testimonial-section {
+  display: flex;
+  text-align: justify;
+  align-items: center;
+  height: 100vh;
+  gap: 4rem;
+
+  .right {
+    width: 60%;
+
+    p {
+      margin-top: 2rem;
+    }
+
+    a {
+      margin-top: 2rem;
+    }
+  }
+
+  .left {
+    width: 45%;
+  }
+}
+
+.testimonial-card {
+  box-shadow: rgba(0, 26, 255, 0.192) 0px 1px 200px 4px;
+  margin-top: 5rem;
+  // padding: 2rem;
+  border-radius: 1.5rem;
+  // height: 12rem;
+
+  .content {
+    background-color: #222222;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    h4 {
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+    }
+
+    img {
+      height: 7rem;
+      padding: 0.5rem;
+    }
+  }
 }
 
 // Buttons

@@ -336,6 +336,78 @@ header {
   bottom: 5%;
 }
 
+section {
+  margin: 5rem 5rem 5rem 5rem;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #0072be;
+}
+
+.testimonial-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: justify;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  gap: 4rem;
+}
+
+.testimonial-section .right {
+  width: 60%;
+}
+
+.testimonial-section .right p {
+  margin-top: 2rem;
+}
+
+.testimonial-section .right a {
+  margin-top: 2rem;
+}
+
+.testimonial-section .left {
+  width: 45%;
+}
+
+.testimonial-card {
+  -webkit-box-shadow: rgba(0, 26, 255, 0.192) 0px 1px 200px 4px;
+          box-shadow: rgba(0, 26, 255, 0.192) 0px 1px 200px 4px;
+  margin-top: 5rem;
+  border-radius: 1.5rem;
+}
+
+.testimonial-card .content {
+  background-color: #222222;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.testimonial-card .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.testimonial-card .info h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.testimonial-card .info img {
+  height: 7rem;
+  padding: 0.5rem;
+}
+
 .register-button:hover {
   background-color: #59cc55 !important;
 }
