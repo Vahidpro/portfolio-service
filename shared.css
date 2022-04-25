@@ -17,7 +17,7 @@ body {
 }
 
 .wrapper {
-  max-width: 980px;
+  max-width: 1048px;
   margin: 0 auto;
 }
 
@@ -48,8 +48,49 @@ header {
   display: inline;
 }
 
+.main-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  margin-top: 1rem;
+}
+
+.main-menu li a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  font-size: 1.125rem;
+}
+
+.main-menu li a:hover {
+  background: #002d709c;
+}
+
+ul {
+  list-style-type: none;
+}
+
 .desktop-menu {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .btn {
@@ -129,11 +170,9 @@ header {
   padding: 0.5rem;
 }
 
+.mobile-nav,
 .toggle-button {
-  display: block;
-  cursor: pointer;
-  border: none;
-  width: 2rem;
+  display: none;
 }
 
 .section-title {
@@ -165,9 +204,8 @@ header {
 }
 
 .mobile-nav {
-  display: none;
   position: fixed;
-  background: whitesmoke;
+  background: #0b0c10;
   z-index: 101;
   border-radius: 0px 0px 10px 10px;
   top: 0;
@@ -189,18 +227,18 @@ header {
 }
 
 .mob-nav-item {
-  margin: 1rem auto;
   padding: 0.8rem;
+  margin: 0.5rem;
 }
 
 .mob-nav-item a {
-  margin: 1rem auto;
   text-decoration: none;
-  color: black;
+  color: #e2e2e2;
+  font-weight: 300;
 }
 
-.mob-nav-item :hover {
-  background: rgba(155, 155, 155, 0.192);
+.mob-nav-item:hover {
+  background: rgba(29, 101, 255, 0.103);
   border-radius: 100px 0px 0px 100px;
 }
 
@@ -210,22 +248,22 @@ header {
 }
 
 .register-botton a {
-  border-radius: 100px 0px 0px 100px;
-  color: black;
+  color: #d2d2f0;
+  font-weight: 600;
 }
 
 .register-botton:hover {
   background: #26c2486b;
   border-radius: 100px 0px 0px 100px;
+  cursor: pointer;
 }
 
 .hero-section {
   height: 90vh;
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0rem 1rem 0 1rem;
+  margin: 0rem 2rem 0 2rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -249,13 +287,12 @@ header {
 }
 
 .hero-section .left {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  margin-bottom: 2rem;
+  margin: 1rem 2rem 2rem 0rem;
 }
 
 .hero-section .left img {
-  height: 22rem;
+  display: block;
+  width: 98%;
 }
 
 .achievement-cards {
@@ -270,13 +307,13 @@ header {
 
 .achievement-card {
   position: absolute;
-  width: 12rem;
+  width: 15%;
 }
 
 .achievement-card .content {
   background: #080741;
   border-radius: 1.5rem;
-  padding: 0.6rem 2rem;
+  padding: 0.6rem;
 }
 
 .achievement-card .content h3 {
@@ -328,7 +365,7 @@ header {
 }
 
 .students-enrolled {
-  right: 25%;
+  right: 27%;
   bottom: 5%;
 }
 
@@ -413,7 +450,7 @@ h2 {
 
 .courses h2 {
   text-align: center;
-  padding-top: 3rem;
+  padding-top: 2rem;
 }
 
 .courses .course-cards {
@@ -426,7 +463,7 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .courses a {
@@ -450,11 +487,12 @@ h2 {
           box-shadow: rgba(55, 0, 255, 0.603) 0px 30px 90px;
   padding: 1rem;
   width: 40%;
+  min-height: 20rem;
   margin: 2rem;
 }
 
 .course-card > img {
-  min-height: 12rem;
+  min-height: 16rem;
   min-width: 2rem;
 }
 
@@ -534,6 +572,10 @@ h2 {
   color: #797676;
 }
 
+.links h3 {
+  color: #adb2ff;
+}
+
 .links li,
 .links .social,
 .links input,
@@ -573,36 +615,182 @@ h2 {
   background-color: #59cc55 !important;
 }
 
-@media (min-width: 48rem) {
-  .main-menu {
+@media (max-width: 48rem) {
+  .desktop-menu {
+    display: none;
+  }
+  .toggle-button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 80%;
-    margin-top: 1rem;
+    cursor: pointer;
+    border: none;
+    width: 2rem;
+    margin-right: 2rem;
+    padding-top: 2rem;
   }
-  .main-menu li a {
-    text-decoration: none;
-    color: white;
+  .logo {
+    margin: 2rem;
+  }
+  .hero-section {
+    height: 150%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .hero-section .left img {
+    margin: 0;
+  }
+  .hero-section .right {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: auto;
+    margin-top: 0;
+  }
+  header {
+    height: 150vh;
+  }
+  .achievement-cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .achievement-card {
+    position: absolute;
+    width: 25%;
+  }
+  .students-enrolled {
+    right: 50%;
+    bottom: -35%;
+  }
+  .testimonial-section {
+    gap: 3rem;
+    margin: 2rem;
+  }
+  .testimonial-section h2 {
+    font-size: 1.5rem;
+  }
+  .testimonial-section .right {
+    width: 45%;
+  }
+  .testimonial-section .right p {
+    margin-top: 2rem;
+  }
+  .testimonial-section .right a {
+    margin-top: 2rem;
+  }
+  .testimonial-section .left {
+    width: 50%;
+  }
+  .testimonial-card {
+    width: 100%;
+  }
+  .testimonial-card .info div {
     padding: 0.5rem;
-    border-radius: 1rem;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-    font-size: 1.125rem;
   }
-  .main-menu li a:hover {
-    background: #002d709c;
+  .testimonial-card .info h4 {
+    font-size: 1.1rem;
   }
+  .testimonial-card .info img {
+    width: 5rem;
+    height: 5rem;
+  }
+  .courses {
+    height: 80vh;
+  }
+  .course-card {
+    width: 40%;
+    min-height: 20rem;
+    margin: 1rem;
+  }
+  .course-card > img {
+    min-height: 8rem;
+    min-width: 1rem;
+  }
+  .course-card h3 {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+  .app-section p {
+    font-size: 1.2rem;
+  }
+  .app-section div img {
+    width: 40%;
+  }
+  .links-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .links {
+    margin: 1rem 4rem;
+    padding: 0;
+  }
+}
+
+@media (max-width: 30rem) {
   .desktop-menu {
+    display: none;
+  }
+  .toggle-button {
+    display: block;
+    cursor: pointer;
+    border: none;
+    width: 2rem;
+  }
+  .hero-section h1 {
+    font-size: 1.6rem;
+  }
+  .achievement-card {
+    width: 45%;
+  }
+  .students-enrolled {
+    right: 50%;
+    bottom: -30%;
+  }
+  header {
+    height: 133vh;
+  }
+  .testimonial-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 120vh;
+    gap: 0;
+  }
+  .testimonial-section .right {
+    width: 90%;
+  }
+  .testimonial-section .right h2 {
+    font-size: 1.3rem;
+  }
+  .testimonial-section .left {
+    width: 90%;
+  }
+  .courses {
+    height: 130vh;
+  }
+  .course-cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .course-card {
+    width: 80%;
+  }
+  .app-section div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -611,12 +799,58 @@ h2 {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .mobile-nav,
-  .toggle-button {
-    display: none;
+  .app-section div img {
+    margin-bottom: 2rem;
+    width: 70%;
   }
-  ul {
-    list-style-type: none;
+  .links-container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+  }
+  .links ul,
+  .links h3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    white-space: nowrap;
+  }
+  .links ul form,
+  .links h3 form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .links a {
+    font-size: 1.3rem;
+    padding: 0.5rem;
+  }
+  .links h3 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
   }
 }
 
