@@ -41,7 +41,7 @@ header {
   -webkit-transform: rotateZ(-5deg);
           transform: rotateZ(-5deg);
   font-family: "Nunito", sans-serif;
-  z-index: 300;
+  z-index: 201;
   opacity: 80%;
 }
 
@@ -203,7 +203,7 @@ ul {
 .mobile-nav {
   position: fixed;
   background: #0b0c10;
-  z-index: 101;
+  z-index: 300;
   border-radius: 0px 0px 10px 10px;
   top: 0;
   left: 0;
