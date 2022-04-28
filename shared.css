@@ -139,7 +139,7 @@ ul {
 }
 
 .light {
-  background-color: #142d53;
+  background-color: #0065ff;
 }
 
 .light:hover,
@@ -403,8 +403,8 @@ h2 {
 }
 
 .testimonial-card {
-  -webkit-box-shadow: rgba(0, 26, 255, 0.192) 0px 1px 200px 4px;
-          box-shadow: rgba(0, 26, 255, 0.192) 0px 1px 200px 4px;
+  -webkit-box-shadow: rgba(0, 26, 255, 0.308) 0px 1px 200px 4px;
+          box-shadow: rgba(0, 26, 255, 0.308) 0px 1px 200px 4px;
   margin-top: 5rem;
   border-radius: 1.5rem;
 }
@@ -656,7 +656,7 @@ h2 {
     margin: 0;
   }
   header {
-    height: 125vh;
+    height: 132vh;
   }
   .achievement-cards {
     display: -webkit-box;
@@ -765,14 +765,14 @@ h2 {
     font-size: 1.6rem;
   }
   .achievement-card {
-    width: 45%;
+    width: 10rem;
   }
   .students-enrolled {
     right: 50%;
-    bottom: -30%;
+    bottom: -35%;
   }
   header {
-    height: 133vh;
+    height: 140vh;
   }
   .testimonial-section {
     -webkit-box-orient: vertical;

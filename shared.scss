@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;900&display=swap");
 
 $green-color: #ffffff;
-$blue-color: #41bbff;
+$blue-color: #0065ff;
 $violet-color: #d941ff;
 $dark-green-color: #199615;
 $dark-green-hover: #59cc55;
@@ -138,7 +138,7 @@ ul {
 }
 
 .light {
-  background-color: $dark-blue-color;
+  background-color: $blue-color;
 
   &:hover,
   :active {
@@ -364,7 +364,7 @@ h2 {
 }
 
 .testimonial-card {
-  box-shadow: rgba(0, 26, 255, 0.192) 0px 1px 200px 4px;
+  box-shadow: rgba(0, 26, 255, 0.308) 0px 1px 200px 4px;
   margin-top: 5rem;
   // padding: 2rem;
   border-radius: 1.5rem;
@@ -587,7 +587,7 @@ h2 {
     }
   }
   header {
-    height: 125vh;
+    height: 132vh;
   }
 
   .achievement-cards {
@@ -718,15 +718,15 @@ h2 {
     }
   }
   .achievement-card {
-    width: 45%;
+    width: 10rem;
   }
 
   .students-enrolled {
     right: 50%;
-    bottom: -30%;
+    bottom: -35%;
   }
   header {
-    height: 133vh;
+    height: 140vh;
   }
 
   .testimonial-section {
