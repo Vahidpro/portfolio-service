@@ -25,12 +25,12 @@ body {
 }
 
 .wrapper {
-  max-width: 1048px;
+  // max-width: 68rem;
   margin: 0 auto;
 }
 
 header {
-  height: 100vh;
+  height: 110vh;
   width: 100%;
   background: rgb(31, 26, 106);
   background: linear-gradient(
@@ -45,7 +45,7 @@ header {
   display: inline;
   position: absolute;
   left: 0.5rem;
-  margin: 1.2rem;
+  margin: 0 0 0 0.5rem;
   color: whitesmoke;
   text-decoration: none;
   font-size: 1.8rem;
@@ -53,19 +53,32 @@ header {
   background: #3385ff;
   border-radius: 2rem;
   transform: rotateZ(-5deg);
-  p {
-    font-family: "Nunito", sans-serif;
-    display: inline;
-  }
+  font-family: "Nunito", sans-serif;
+  z-index: 300;
+  opacity: 80%;
 }
-.main-menu {
+
+.scrolled {
+  background: -webkit-linear-gradient(94deg, rgb(35, 0, 50), rgb(21, 1, 78));
+  background: linear-gradient(94deg, rgb(35, 0, 50), rgb(21, 1, 78));
+  border-radius: 0 0 0.7rem 0.7rem;
+  // padding-bottom: 0.7rem;
+  position: fixed;
+  z-index: 200;
+  padding: 0.5rem;
+  padding-right: 3rem;
+}
+
+nav {
+  width: 100%;
+  padding: 2rem 5rem;
+  position: fixed;
+}
+.desktop-nav {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   align-items: center;
-  width: 80%;
-  margin-top: 1rem;
-  // position: fixed;
+  gap: 1rem;
+  margin: 0;
 
   li a {
     text-decoration: none;
@@ -74,6 +87,7 @@ header {
     border-radius: 1rem;
     transition: all 0.5s;
     font-size: 1.125rem;
+    white-space: nowrap;
 
     &:hover {
       background: #002d709c;
@@ -82,10 +96,6 @@ header {
 }
 ul {
   list-style-type: none;
-}
-.desktop-menu {
-  display: flex;
-  flex-direction: column;
 }
 
 .btn {
@@ -240,9 +250,9 @@ ul {
   margin: 0rem 2rem 0 2rem;
   align-items: center;
   .right {
-    width: 28.125rem;
+    width: 30rem;
     align-self: flex-start;
-    margin-top: 5rem;
+    margin: 13rem 3rem;
 
     .paragraph {
       margin-top: 3rem;
@@ -257,7 +267,7 @@ ul {
 
   .left {
     // align-self: flex-end;
-    margin: 1rem 2rem 2rem 0rem;
+    margin: 13rem 2rem 2rem 0rem;
 
     img {
       display: block;
@@ -273,7 +283,7 @@ ul {
 
 .achievement-card {
   position: absolute;
-  width: 15%;
+  width: 10rem;
 
   .content {
     background: #080741;
@@ -310,12 +320,13 @@ ul {
 
     p {
       text-align: center;
+      white-space: nowrap;
     }
   }
 }
 
 .students-enrolled {
-  right: 27%;
+  right: 33%;
   bottom: 5%;
 }
 
@@ -385,7 +396,6 @@ h2 {
     }
   }
 }
-
 .courses {
   height: 100vh;
   // width: 100%;
@@ -535,8 +545,16 @@ h2 {
 // Tablet
 
 @media (max-width: 48rem) {
-  .desktop-menu {
+  nav {
+    // margin: 1rem;
+    padding: 1.5rem 1rem;
+  }
+  .desktop-nav {
     display: none;
+  }
+
+  .scrolled {
+    padding: 0.7rem 0.5rem;
   }
   .toggle-button {
     display: flex;
@@ -544,16 +562,17 @@ h2 {
     border: none;
     width: 2rem;
     margin-right: 2rem;
-    padding-top: 2rem;
   }
 
   .logo {
-    margin: 2rem;
+    // margin: 2rem;
+    font-size: 1.5rem;
   }
 
   .hero-section {
-    height: 150%;
+    // height: 150%;
     flex-direction: column-reverse;
+    justify-content: center;
     .left {
       img {
         margin: 0;
@@ -564,10 +583,11 @@ h2 {
       align-self: center;
       width: auto;
       margin-top: 0;
+      margin: 0;
     }
   }
   header {
-    height: 150vh;
+    height: 125vh;
   }
 
   .achievement-cards {
@@ -577,12 +597,12 @@ h2 {
 
   .achievement-card {
     position: absolute;
-    width: 25%;
+    width: 9rem;
   }
 
   .students-enrolled {
     right: 50%;
-    bottom: -35%;
+    bottom: -20%;
   }
 
   .testimonial-section {
@@ -669,7 +689,14 @@ h2 {
 // Mobile
 
 @media (max-width: 30rem) {
-  .desktop-menu {
+  nav {
+    padding: 1rem 0;
+  }
+
+  .scrolled {
+    padding: 0.3rem 0;
+  }
+  .desktop-nav {
     display: none;
   }
   .toggle-button {
@@ -678,6 +705,11 @@ h2 {
     border: none;
     width: 2rem;
     // margin: 0.8rem;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+    margin-top: 0.2rem;
   }
 
   .hero-section {

@@ -15,3 +15,16 @@ closeButton.addEventListener("click", function () {
     backdrop.classList.remove("open");
   }, 10);
 });
+
+// Scroll nav
+var nav = document.querySelector("nav");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
+});
+
+var scroller = window.scrollY;
+console.log(scroller);

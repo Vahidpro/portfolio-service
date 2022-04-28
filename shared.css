@@ -17,12 +17,11 @@ body {
 }
 
 .wrapper {
-  max-width: 1048px;
   margin: 0 auto;
 }
 
 header {
-  height: 100vh;
+  height: 110vh;
   width: 100%;
   background: #1f1a6a;
   background: linear-gradient(49deg, #1f1a6a 0%, rgba(9, 17, 121, 0.994835) 45%, #005bff 100%);
@@ -32,7 +31,7 @@ header {
   display: inline;
   position: absolute;
   left: 0.5rem;
-  margin: 1.2rem;
+  margin: 0 0 0 0.5rem;
   color: whitesmoke;
   text-decoration: none;
   font-size: 1.8rem;
@@ -41,31 +40,38 @@ header {
   border-radius: 2rem;
   -webkit-transform: rotateZ(-5deg);
           transform: rotateZ(-5deg);
-}
-
-.logo p {
   font-family: "Nunito", sans-serif;
-  display: inline;
+  z-index: 300;
+  opacity: 80%;
 }
 
-.main-menu {
+.scrolled {
+  background: linear-gradient(94deg, #230032, #15014e);
+  border-radius: 0 0 0.7rem 0.7rem;
+  position: fixed;
+  z-index: 200;
+  padding: 0.5rem;
+  padding-right: 3rem;
+}
+
+nav {
+  width: 100%;
+  padding: 2rem 5rem;
+  position: fixed;
+}
+
+.desktop-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 80%;
-  margin-top: 1rem;
+  gap: 1rem;
+  margin: 0;
 }
 
-.main-menu li a {
+.desktop-nav li a {
   text-decoration: none;
   color: white;
   padding: 0.5rem;
@@ -73,24 +79,15 @@ header {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   font-size: 1.125rem;
+  white-space: nowrap;
 }
 
-.main-menu li a:hover {
+.desktop-nav li a:hover {
   background: #002d709c;
 }
 
 ul {
   list-style-type: none;
-}
-
-.desktop-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .btn {
@@ -270,10 +267,10 @@ ul {
 }
 
 .hero-section .right {
-  width: 28.125rem;
+  width: 30rem;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  margin-top: 5rem;
+  margin: 13rem 3rem;
 }
 
 .hero-section .right .paragraph {
@@ -287,7 +284,7 @@ ul {
 }
 
 .hero-section .left {
-  margin: 1rem 2rem 2rem 0rem;
+  margin: 13rem 2rem 2rem 0rem;
 }
 
 .hero-section .left img {
@@ -307,7 +304,7 @@ ul {
 
 .achievement-card {
   position: absolute;
-  width: 15%;
+  width: 10rem;
 }
 
 .achievement-card .content {
@@ -362,10 +359,11 @@ ul {
 
 .achievement-card .content p {
   text-align: center;
+  white-space: nowrap;
 }
 
 .students-enrolled {
-  right: 27%;
+  right: 33%;
   bottom: 5%;
 }
 
@@ -616,8 +614,14 @@ h2 {
 }
 
 @media (max-width: 48rem) {
-  .desktop-menu {
+  nav {
+    padding: 1.5rem 1rem;
+  }
+  .desktop-nav {
     display: none;
+  }
+  .scrolled {
+    padding: 0.7rem 0.5rem;
   }
   .toggle-button {
     display: -webkit-box;
@@ -627,17 +631,18 @@ h2 {
     border: none;
     width: 2rem;
     margin-right: 2rem;
-    padding-top: 2rem;
   }
   .logo {
-    margin: 2rem;
+    font-size: 1.5rem;
   }
   .hero-section {
-    height: 150%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .hero-section .left img {
     margin: 0;
@@ -648,9 +653,10 @@ h2 {
         align-self: center;
     width: auto;
     margin-top: 0;
+    margin: 0;
   }
   header {
-    height: 150vh;
+    height: 125vh;
   }
   .achievement-cards {
     display: -webkit-box;
@@ -659,11 +665,11 @@ h2 {
   }
   .achievement-card {
     position: absolute;
-    width: 25%;
+    width: 9rem;
   }
   .students-enrolled {
     right: 50%;
-    bottom: -35%;
+    bottom: -20%;
   }
   .testimonial-section {
     gap: 3rem;
@@ -736,7 +742,13 @@ h2 {
 }
 
 @media (max-width: 30rem) {
-  .desktop-menu {
+  nav {
+    padding: 1rem 0;
+  }
+  .scrolled {
+    padding: 0.3rem 0;
+  }
+  .desktop-nav {
     display: none;
   }
   .toggle-button {
@@ -744,6 +756,10 @@ h2 {
     cursor: pointer;
     border: none;
     width: 2rem;
+  }
+  .logo {
+    font-size: 1.3rem;
+    margin-top: 0.2rem;
   }
   .hero-section h1 {
     font-size: 1.6rem;
