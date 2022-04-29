@@ -167,7 +167,6 @@ ul {
   padding: 0.5rem;
 }
 
-.mobile-nav,
 .toggle-button {
   display: none;
 }
@@ -191,15 +190,6 @@ ul {
           transform: translateY(0);
 }
 
-.mobile-nav .close-button {
-  cursor: pointer;
-  text-align: left;
-}
-
-.close-button svg {
-  width: 2rem;
-}
-
 .mobile-nav {
   position: fixed;
   background: #0b0c10;
@@ -212,6 +202,29 @@ ul {
   text-align: center;
   font-weight: 500;
   font-size: x-large;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  -webkit-transform: translateX(750px);
+          transform: translateX(750px);
+}
+
+.slide {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.close-button {
+  cursor: pointer;
+  position: fixed;
+  top: 0.5rem;
+  margin-top: 0.4rem;
+  right: 3rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.close-button svg {
+  width: 2.5rem;
 }
 
 .mob-nav-items {
@@ -219,7 +232,7 @@ ul {
   height: 100%; */
   list-style: none;
   padding: 0;
-  margin: 10% auto;
+  margin: 20% auto;
   text-decoration: none;
 }
 

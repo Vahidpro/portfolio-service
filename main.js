@@ -3,17 +3,13 @@ var mobileNav = document.querySelector(".mobile-nav");
 var closeButton = document.querySelector(".close-button");
 
 toggleButton.addEventListener("click", function () {
-  mobileNav.classList.add("open");
-  setTimeout(function () {
-    backdrop.classList.add("open");
-  }, 10);
+  // mobileNav.classList.add("open");
+  mobileNav.classList.add("slide");
 });
 
 closeButton.addEventListener("click", function () {
-  mobileNav.classList.remove("open");
-  setTimeout(function () {
-    backdrop.classList.remove("open");
-  }, 10);
+  // mobileNav.classList.remove("open");
+  mobileNav.classList.remove("slide");
 });
 
 // Scroll nav
@@ -28,3 +24,5 @@ window.addEventListener("scroll", () => {
 
 var scroller = window.scrollY;
 console.log(scroller);
+
+// Animate mobile nav
