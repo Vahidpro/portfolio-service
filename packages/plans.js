@@ -10,6 +10,7 @@ console.log(closeModalNoButton);
 for (let i = 0; i < planButtons.length; i++) {
   planButtons[i].addEventListener("click", function () {
     backdrop.style.display = "block";
+    modal.style.display = "block";
     setTimeout(function () {
       backdrop.classList.add("open");
     }, 10);
@@ -31,5 +32,6 @@ function closeModal() {
 
   setTimeout(function () {
     backdrop.style.display = "none";
+    // modal.style.display = "none";
   }, 300);
 }

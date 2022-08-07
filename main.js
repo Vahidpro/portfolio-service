@@ -22,7 +22,19 @@ window.addEventListener("scroll", () => {
   }
 });
 
-var scroller = window.scrollY;
-console.log(scroller);
+const header = document.querySelector(".header");
 
-// Animate mobile nav
+const cookieMessage = document.createElement("div");
+cookieMessage.classList.add("cookie-message");
+
+cookieMessage.innerHTML = `ما از کوکی ها برای بهبود تجربه کاربری شما استفاده میکنیم
+
+<button class="btn light btn--close-cookie">فهمیدم!</button>`;
+
+header.append(cookieMessage);
+
+document
+  .querySelector(".btn--close-cookie")
+  .addEventListener("click", function () {
+    cookieMessage.remove();
+  });
