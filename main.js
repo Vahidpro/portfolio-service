@@ -2,15 +2,18 @@ var toggleButton = document.querySelector(".toggle-button");
 var mobileNav = document.querySelector(".mobile-nav");
 var closeButton = document.querySelector(".close-button");
 
-toggleButton.addEventListener("click", function () {
+toggleButton.addEventListener("click", function (e) {
+  e.preventDefault();
   // mobileNav.classList.add("open");
-  mobileNav.classList.add("slide");
+  mobileNav.classList.toggle("slide");
 });
 
 closeButton.addEventListener("click", function () {
   // mobileNav.classList.remove("open");
-  mobileNav.classList.remove("slide");
+  mobileNav.classList.toggle("slide");
 });
+
+// close after click links
 
 // Scroll nav
 var nav = document.querySelector("nav");
@@ -38,3 +41,24 @@ document
   .addEventListener("click", function () {
     cookieMessage.remove();
   });
+
+// Smooth scrolling
+document.querySelectorAll(".nav__link").forEach(function (el) {
+  el.addEventListener("click", function (e) {
+    e.preventDefault();
+    mobileNav.classList.toggle("slide");
+
+    const id = this.getAttribute("href");
+    console.log(id);
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  });
+});
+
+document.querySelectorAll(".nav__link--desk").forEach(function (el) {
+  el.addEventListener("click", function (e) {
+    e.preventDefault();
+    const id = this.getAttribute("href");
+    console.log(id);
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  });
+});
