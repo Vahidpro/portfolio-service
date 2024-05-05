@@ -94,7 +94,6 @@ ul {
   text-align: center;
   text-decoration: none;
   -moz-user-select: none;
-   -ms-user-select: none;
        user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -660,7 +659,7 @@ h2 {
     padding: 0;
   }
   .links ul,
-.links h3 {
+  .links h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -669,7 +668,7 @@ h2 {
     white-space: nowrap;
   }
   .links ul form,
-.links h3 form {
+  .links h3 form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -681,14 +680,6 @@ h2 {
   .links h3 {
     font-size: 1.5rem;
     margin-top: 2rem;
-  }
-}
-@-webkit-keyframes wiggle {
-  from {
-    transform: rotateZ(0);
-  }
-  to {
-    transform: rotateZ(10deg);
   }
 }
 @keyframes wiggle {
