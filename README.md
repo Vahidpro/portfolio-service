@@ -1,6 +1,19 @@
 # Service Template Website
 
-This is a JavaScript application that provides a service template website. The website can be used for various product or service offerings and includes multiple sections such as plans, hero, user reviews, products, app download, and more. The website is fully responsive and adapts to different screen sizes.
+This is an experimental JavaScript application that provides a service template website. The website can be used for various product or service offerings and includes multiple sections such as plans, hero, user reviews, products, app download, and more. The website is fully responsive and adapts to different screen sizes.
+
+## Screenshots
+| Hero Section  | Comments |
+| ------------- | ------------- |
+|  ![Screenshot 2024-05-05 095737](https://github.com/Vahidpro/portfolio-service/assets/43805831/7bf83703-1e7e-475c-bbab-17e21af5ff22) |  ![Screenshot 2024-05-05 095800](https://github.com/Vahidpro/portfolio-service/assets/43805831/0da16f7e-2bc0-4660-8f85-e47c9d13526a) |
+
+| App Download  | Footer |
+| ------------- | ------------- |
+|  ![Screenshot 2024-05-05 095814](https://github.com/Vahidpro/portfolio-service/assets/43805831/070091f0-c8cf-4c87-a8ef-c5e57fa4ce6a)| ![Screenshot 2024-05-05 101029](https://github.com/Vahidpro/portfolio-service/assets/43805831/dd558d2f-b294-4a7c-9c70-1e17276dcdbb) |
+
+| Mobile Hero  | Hambergur Menu | Footer|
+| ------------- | ------------- | ----|
+|![Screenshot 2024-05-05 100112](https://github.com/Vahidpro/portfolio-service/assets/43805831/34a03564-2355-4e56-92b4-4e8186e7024a) | ![Screenshot 2024-05-05 101411](https://github.com/Vahidpro/portfolio-service/assets/43805831/67edd0f9-3315-4aa6-93f2-68227b9b11ca)|![Screenshot 2024-05-05 100141](https://github.com/Vahidpro/portfolio-service/assets/43805831/df1c6fe2-2de8-4f0e-9334-d4e61c17e479)|
 
 ## Technologies Used
 
